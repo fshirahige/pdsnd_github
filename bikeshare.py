@@ -16,7 +16,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    
+
     # Get user input for city (chicago, new york city, washington) and handle invalid inputs
     while True:
         city = input('Enter the city name:').lower()
@@ -73,7 +73,7 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         month = months.index(month)+1
-    
+
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
@@ -86,7 +86,7 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel. It includes month, weekdays and hours."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -148,7 +148,7 @@ def trip_duration_stats(df):
     # Print the results
     print('\nTotal Travel Time: {}\n'.format(total_travel_time))
     print('\nMean Travel Time: {}\n'.format(mean_travel_time))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -173,17 +173,17 @@ def user_stats(df):
         earlies_birth_year = int(df['Birth Year'].min())
         recent_birth_year = int(df['Birth Year'].max())
         common_birth_year = int(df['Birth Year'].value_counts().idxmax())
-        
+
     except:
         earlies_birth_year, recent_birth_year, common_birth_year = 'Data not available for this city', 'Data not available for this city', 'Data not available for this city'
-        
+
     # Print the results
     print('\nCounts of user types: \n{}\n'.format(user_types))
     print('\nCounts of gender: \n{}\n'.format(gender))
     print('\nEarliest year of birth: {}\n'.format(earlies_birth_year))
     print('\nMost recent year of birth: {}\n'.format(recent_birth_year))
     print('\nMost common year of birth: {}\n'.format(common_birth_year))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -200,7 +200,7 @@ def main():
         x = 0
         y = 1
         raw_data = input('\nWould you like to see raw data? Enter yes or no.\n')
-        while True:                     
+        while True:
             if raw_data.lower()== 'yes':
                 print(df.iloc[5*x:5*y])
                 x+=1
@@ -211,7 +211,7 @@ def main():
                     x+=1
                     y+=1
                 else: break
-       
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
