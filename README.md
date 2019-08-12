@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+This project was created on August 3rd, 2019.
 
 ### Project Title
-Replace the Project Title
+bikeshare.py
 
 ### Description
-Describe what your project is about and what it does
+The main objetive of this project is to analyze data from bike share system from the cities of
+New York, Washington and Chicago in order to understand the behavior of people in these cities and
+their purpose.
 
 ### Files used
-Include the files used
+new_york_city.csv
+chicago.csv
+washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+## Credits
+stackoverflow
+python docs.
