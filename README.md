@@ -17,3 +17,4 @@ washington.csv
 ## Credits
 stackoverflow
 python docs.
+udacity "Programming for Data Science" course
